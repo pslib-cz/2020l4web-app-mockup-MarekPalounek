@@ -2,7 +2,7 @@
 
 Jedná se o digitální adaptaci známé hry lodě.
 
-Herní plocha se skládá ze čtvercové sítě 10x10
+Herní plocha se skládá ze čtvercové sítě 10x10.
 Každý hráč musí do sítě umístít celkem 5 lodí
 - Letadlová loď (velikost: 5)
 - Bitevní loď (velikost: 4)
