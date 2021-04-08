@@ -4,6 +4,10 @@ body {
     max-height: 100vh;
     font-family: 'Roboto', sans-serif;;
 }
+main {
+    flex-wrap: wrap;
+}
+
 .name{
     max-width: 100%;
     text-align: center;
@@ -15,55 +19,67 @@ body {
 }
 
 
-.selectboard{
+.gameboard-select{
     position: absolute;
     left: calc(50% - 293px);
     top: 200px;
 }
 
-.gameboard{
-    margin: 100px auto;
-    display: flex;
-    justify-content: space-between;
+.gametable {
     width: 1400px;
+    margin: 0 auto;
+    padding: 50px 0;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
-.player{
-    font-size: 1.5em;
-    font-weight: 700;
-    margin-left: 25px;
 
+
+.player1::before{
+    content: "You";
+}
+.player2::before{
+    content: "Opponent";
+}
+
+.player1::before, .player2::before{
+    font-size: 2em;
+    font-weight: 700;
+    position: absolute;
+    top: -10px; 
+}
+
+
+.player2 span{
+    color: transparent;
 }
 
 table { 
     border-spacing: 0px;
     background-color: white;
-    text-align: center;
-}
-
-
-tr {
-    height: 50px;
+    border: solid 2px black;
 }
 
 td {
-    width: 48px;
-    border: solid 1px black;
-    background-color: rgb(206, 252, 255);
-}
-
-td img{
     width: 50px;
+    height: 50px;
 }
 
-td:hover{
-    background-color: grey;
+
+/* barevná šachovnice + hover */
+
+tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
+    background-color: rgb(135, 234, 241);
 }
 
-th{
-    width: 48px;
-    font-size: 1.3em;
+.player2 td:hover,.player2 tr:nth-child(odd) td:nth-child(odd):hover,.player2 tr:nth-child(even) td:nth-child(even):hover {
+    background-image: url(./Illustrator/SVG/Crosshair.svg);
 }
+
+
+
 
 .button span{
     background-color: blue;
@@ -103,7 +119,120 @@ th{
 }
 
 
-.ship {
-    height: 60px;
 
+
+/* pozicování lodí a min */
+
+.bomb span {
+    display: block;
+    height: 100%;
+    background-image: url(./Illustrator/SVG/Bomb.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.player2 tr:nth-child(10) span, .player2 tr:nth-child(9) span, .player2 tr:nth-child(8) span, .player2 tr:nth-child(7) span, .player2 tr:nth-child(6) span {
+    background-size: 0px;
+}
+
+
+
+
+.ship2 {
+    background-image: url(./Illustrator/SVG/Ship-2x.svg);
+    background-size: auto 50px;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+.ship3 {
+    background-image: url(./Illustrator/SVG/Ship-3x.svg);
+    background-size: auto 50px;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+.ship4 {
+    background-image: url(./Illustrator/SVG/Ship-4x.svg);
+    background-size: auto 50px;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+.ship5 {
+    background-image: url(./Illustrator/SVG/Ship-5x.svg);
+    background-size: auto 50px;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+.ship6 {
+    background-image: url(./Illustrator/SVG/Ship-6x.svg);
+    background-size: auto 50px;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+}
+
+
+
+.offset-1{
+    background-position-x: 0;
+}
+
+.offset-2 {
+    background-position-x: -50px;
+}
+
+.offset-3 {
+    background-position-x: -100px;
+}
+
+.offset-4 {
+    background-position-x: -150px;
+}
+
+.offset-5 {
+    background-position-x: -200px;
+}
+
+.offset-6 {
+    background-position-x: -250px;
+}
+
+
+
+
+/* pozicování značek souřadnic */
+
+.columnorder {
+    display: flex;
+    margin: 0 auto;
+    padding: 0;
+}
+.columnorder span{
+    width: 52px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.columnorder span, tr::before {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+tr{
+    height: 54px;
+    counter-increment: lineorder;
+    position: relative;
+    display: flex;  
+}
+
+tr::before {
+    content: counter(lineorder);
+    position: absolute;
+    left: -25px;
+    top: 15px;
+}
+tr:last-child::before{
+    left: -32px;
 }

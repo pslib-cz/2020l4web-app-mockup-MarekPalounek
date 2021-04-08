@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>Battleships</title>
+</head>
+
+<body>
+    <main>
+        <div class="name">
+            <p>Battleships</p>
+        </div>
+
+        <div class="gametable">
+
+            <div class="gameboard player1">
+
+                <div class="columnorder">
+                    <span>A</span>
+                    <span>B</span>
+                    <span>C</span>
+                    <span>D</span>
+                    <span>E</span>
+                    <span>F</span>
+                    <span>G</span>
+                    <span>H</span>
+                    <span>I</span>
+                    <span>J</span>
+                </div>
+                <table>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td class="ship2 offset-1 "></td>
+                        <td class="ship2 offset-2"></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="ship3 offset-1 "></td>
+                        <td class="ship3 offset-2 "></td>
+                        <td class="ship3 offset-3 "></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="ship4 offset-1 "></td>
+                        <td class="ship4 offset-2 "></td>
+                        <td class="ship4 offset-3 "></td>
+                        <td class="ship4 offset-4 "></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="ship6 offset-1 "></td>
+                        <td class="ship6 offset-2 "></td>
+                        <td class="ship6 offset-3 "></td>
+                        <td class="ship6 offset-4 "></td>
+                        <td class="ship6 offset-5 "></td>
+                        <td class="ship6 offset-6 "></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="ship2 offset-1 "></td>
+                        <td class="ship2 offset-2 "></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="ship5 offset-1 "></td>
+                        <td class="ship5 offset-2 "></td>
+                        <td class="ship5 offset-3 "></td>
+                        <td class="ship5 offset-4 "></td>
+                        <td class="ship5 offset-5 "></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="gameboard player2">
+                <div class="columnorder">
+                    <span>A</span>
+                    <span>B</span>
+                    <span>C</span>
+                    <span>D</span>
+                    <span>E</span>
+                    <span>F</span>
+                    <span>G</span>
+                    <span>H</span>
+                    <span>I</span>
+                    <span>J</span>
+                </div>
+                <table>
+                    <tr>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <div class="button newgame">
+            <span>
+                <a href="./index.html">Nová hra</a>
+            </span>
+        </div>
+    </main>
+
+</body>
+
+</html>
