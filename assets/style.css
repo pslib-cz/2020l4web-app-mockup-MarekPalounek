@@ -52,7 +52,7 @@ main {
 }
 
 
-.player2 span{
+.player2 table span{
     color: transparent;
 }
 
@@ -138,6 +138,7 @@ tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
     background-repeat: no-repeat;
 }
 
+
 .player2 tr:nth-child(10) span, .player2 tr:nth-child(9) span, .player2 tr:nth-child(8) span, .player2 tr:nth-child(7) span, .player2 tr:nth-child(6) span {
     background-size: 0px;
 }
@@ -216,6 +217,7 @@ tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
     margin: 0 auto;
     padding: 0;
 }
+
 .columnorder span{
     width: 52px;
     padding-bottom: 5px;
