@@ -12,10 +12,26 @@
 </head>
 
 <body>
-    <main>
-        <div class="name">
-            <p>Battleships</p>
+   
+   
+    <div class="navbar-wrap">
+        <div class="navbar">
+    
+            <h1 class="name">
+                Battleships
+            </h1>
+           
+            <div class="user">
+                <p>Přihlášen: (User name)</p>
+            </div>
+            <div class="logout-btt">
+                <a href="./index.html">Odhlásit se</a>
+            </div>
+    
         </div>
+    </div>
+
+    <main>
 
         <div class="gametable">
 
@@ -33,12 +49,12 @@
                     <span>I</span>
                     <span>J</span>
                 </div>
-                <table>
+                <table class="game">
                     <tr>
                         <td class="ship offset- "></td>
                         <td class="ship offset- "></td>
                         <td class="ship2 offset-1 "></td>
-                        <td class="ship2 offset-2"></td>
+                        <td class="ship2 offset-2 "></td>
                         <td class="ship offset- "></td>
                         <td class="ship offset- "></td>
                         <td class="ship offset- "></td>
@@ -72,7 +88,7 @@
                     </tr>
                     <tr>
                         <td class="ship offset- "></td>
-                        <td class="ship offset- "></td>
+                        <td class="ship offset-"></td>
                         <td class="ship offset- "></td>
                         <td class="ship offset- "></td>
                         <td class="ship offset- "></td>
@@ -170,7 +186,7 @@
                     <span>I</span>
                     <span>J</span>
                 </div>
-                <table>
+                <table class="game">
                     <tr>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
@@ -185,21 +201,9 @@
                     </tr>
                     <tr>
                         <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                    </tr>
-                    <tr>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb hit ship3 offset-1"><span>B</span></td>
+                        <td class="bomb hit ship3 offset-2"><span>B</span></td>
+                        <td class="bomb hit ship3 offset-3"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
@@ -214,19 +218,7 @@
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                    </tr>
-                    <tr>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
-                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb hit"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
@@ -238,6 +230,18 @@
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
+                        <td class="bomb hit"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                    </tr>
+                    <tr>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb hit"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
@@ -248,10 +252,22 @@
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
+                        <td class="bomb hit"><span>B</span></td>
+                        <td class="bomb hit"><span>B</span></td>
+                        <td class="bomb hit"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb hit"><span>B</span></td>
+                    </tr>
+                    <tr>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb"><span>B</span></td>
+                        <td class="bomb hit"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                         <td class="bomb"><span>B</span></td>
                     </tr>
@@ -296,10 +312,12 @@
 
         </div>
 
-        <div class="button newgame">
-            <span>
-                <a href="./index.html">Nová hra</a>
-            </span>
+        <div class="button-wrap">
+            <div class="button play">
+                <span>
+                    <a href="./index.html">Nová hra</a>
+                </span>
+            </div>
         </div>
     </main>
 

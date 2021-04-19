@@ -12,10 +12,88 @@
 </head>
 
 <body>
-    <main>
-        <div class="name">
-            <p>Battleships</p>
+    <div class="navbar-wrap">
+        <div class="navbar">
+    
+            <h1 class="name">
+                Battleships
+    
+            </h1>
+            <div class="login-btt">
+                <input type="checkbox" id="log-in-btt">
+                <label for="log-in-btt">Přihlášení / Registrace</label>
+    
+    
+                <div class="login-container">
+                    <label for="log-in-btt"><img src="./assets/Illustrator/SVG/cross.svg" alt="cross"></label>
+    
+                    <section class="log-in">
+                        <h2>Přihlášení</h2>
+                        <div class="form">
+                            <p>Email</p>
+                            <input type="email">
+                        </div>
+                        <div class="form">
+                            <p>Heslo</p>
+                            <input type="text">
+                        </div>
+                        <div class="button">
+                            <span>
+                                <a href="#">Přihlásit se</a>
+                            </span>
+                        </div>
+                    </section>
+    
+                    <section class="sign-in">
+                        <h2>Vytvoření účtu</h2>
+                        <div class="form">
+                            <p>Email</p>
+                            <input type="email">
+                        </div>
+                        <div class="form">
+                            <p>Heslo</p>
+                            <input type="text">
+                        </div>
+                        <div class="form">
+                            <p>Potvrzení hesla</p>
+                            <input type="text">
+                        </div>
+                        <div class="button">
+                            <span>
+                                <a href="#">Vytvořit účet</a>
+                            </span>
+                        </div>
+                    </section>
+    
+                    <section class="login-via-app">
+                        <h2>Přihlášení pomocí jiného účtu</h2>
+                        <div class="button">
+                            <span>
+                                <a href="#">Microsoft</a>
+                            </span>
+                        </div>
+                        <div class="button">
+                            <span>
+                                <a href="#">Google</a>
+                            </span>
+                        </div>
+                        <div class="button">
+                            <span>
+                                <a href="#">Facebook</a>
+                            </span>
+                        </div>
+    
+    
+                    </section>
+    
+                </div>
+            </div>
+    
         </div>
+    </div>
+
+
+    <main>
         <div class="gameboard-select">
             <div class="columnorder">
                 <span>A</span>
@@ -29,7 +107,7 @@
                 <span>I</span>
                 <span>J</span>
             </div>
-            <table>
+            <table class="game">
                 <tr>
                     <td></td>
                     <td></td>
@@ -151,24 +229,119 @@
                     <td></td>
                 </tr>
             </table>
-            <div class="button play">
-                <span>
-                    <a href="./game.html">Hrát</a>
-                </span>
-            </div>
 
         </div>
         <div class="battleships">
             <div class="headline">
-                <p>Výběr lodí</p>
+                <h2>Výběr lodí</h2>
             </div>
-            <div><img class="ship" src="./assets/Illustrator/SVG/Ship-2x.svg" alt="cruiser"></div>
-            <div><img class="ship" src="./assets/Illustrator/SVG/Ship-3x.svg" alt="cruiser"></div>
-            <div><img class="ship" src="./assets/Illustrator/SVG/Ship-4x.svg" alt="cruiser"></div>
-            <div><img class="ship" src="./assets/Illustrator/SVG/Ship-5x.svg" alt="cruiser"></div>
-            <div><img class="ship" src="./assets/Illustrator/SVG/Ship-6x.svg" alt="cruiser"></div>
+            <div><img class="ship" src="./assets/Illustrator/SVG/Ship-2x.svg"></div>
+            <div><img class="ship" src="./assets/Illustrator/SVG/Ship-3x.svg"></div>
+            <div><img class="ship" src="./assets/Illustrator/SVG/Ship-4x.svg"></div>
+            <div><img class="ship" src="./assets/Illustrator/SVG/Ship-5x.svg"></div>
+            <div><img class="ship" src="./assets/Illustrator/SVG/Ship-6x.svg"></div>
 
         </div>
+
+        <div class="button-wrap">
+            <div class="button play">
+                <span>
+                    <a href="./game.html">Začít hru</a>
+                </span>
+            </div>
+            <div class="button ">
+                <span>
+                    <input type="checkbox" id="find-game">
+                    <label for="find-game">Připojit se do hry</label>
+
+                    <div class="find-game_container">
+                        <label for="find-game"><img src="./assets/Illustrator/SVG/cross.svg" alt="cross"></label>
+                        <h2>Seznam vytvořených her</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Datum vytvoření</th>
+                                    <th>Soupeř</th>
+                                    <th>Aktuální stav</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <td>19.03.2021</td>
+                                    <td>Pepa</td>
+                                    <td>Čekání na hráče</td>
+                                    <td>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/play3.svg" alt="continue"></a>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/bin2.svg" alt="delete"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12.05.2021</td>
+                                    <td>Pepa</td>
+                                    <td>Čekání na hráče</td>
+                                    <td>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/play3.svg" alt="continue"></a>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/bin2.svg" alt="delete"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>19.03.2020</td>
+                                    <td>Pepa</td>
+                                    <td>Čekání na hráče</td>
+                                    <td>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/play3.svg" alt="continue"></a>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/bin2.svg" alt="delete"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>15.03.2020</td>
+                                    <td>Vašek</td>
+                                    <td>Jste na tahu</td>
+                                    <td>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/play3.svg" alt="continue"></a>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/bin2.svg" alt="delete"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>12.03.2018</td>
+                                    <td>Franta</td>
+                                    <td>Čekání na hráče</td>
+                                    <td>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/play3.svg" alt="continue"></a>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/bin2.svg" alt="delete"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>19.08.2018</td>
+                                    <td>Pepa</td>
+                                    <td>Jste na tahu</td>
+                                    <td>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/play3.svg" alt="continue"></a>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/bin2.svg" alt="delete"></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>19.03.2016</td>
+                                    <td>Pepa</td>
+                                    <td>Jste na tahu</td>
+                                    <td>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/play3.svg" alt="continue"></a>
+                                        <a href="#"><img src="./assets/Illustrator/SVG/bin2.svg" alt="delete"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                    </div>
+
+                </span>
+            </div>
+        </div>
+
+
     </main>
 
 </body>

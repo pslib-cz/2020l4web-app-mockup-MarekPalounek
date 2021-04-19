@@ -1,117 +1,171 @@
 body {
     background-color: rgb(255, 255, 255);
     max-width: 100vw;
-    max-height: 100vh;
+    
+    margin: 0;
     font-family: 'Roboto', sans-serif;;
 }
 main {
+    max-width: 1500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
-.name{
-    max-width: 100%;
-    text-align: center;
-    margin-top: 60px;
 
-}
-.name p{
-    font-size: 3em;
+
+h1 {
+    font-size: 2.5em;
 }
 
 
-.gameboard-select{
-    position: absolute;
-    left: calc(50% - 293px);
-    top: 200px;
-}
-
-.gametable {
-    width: 1400px;
-    margin: 0 auto;
-    padding: 50px 0;
-    position: relative;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-
-
-.player1::before{
-    content: "You";
-}
-.player2::before{
-    content: "Opponent";
-}
-
-.player1::before, .player2::before{
+h2{
     font-size: 2em;
-    font-weight: 700;
-    position: absolute;
-    top: -10px; 
+}
+
+label {
+    cursor: pointer
 }
 
 
-.player2 table span{
-    color: transparent;
+/* Navigace + Přihlášení */
+
+.name{
+    text-align: left;
+    margin-left: 50px;
 }
 
-table { 
-    border-spacing: 0px;
+
+
+.navbar {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    
+   
+}
+
+.navbar-wrap {
+    width: 100vw;
+    z-index: 5;
     background-color: white;
-    border: solid 2px black;
-}
-
-td {
-    width: 50px;
-    height: 50px;
+    margin-bottom: 50px;
+    border-bottom: solid 1px rgb(194, 194, 194);
+    box-shadow: 0px -2px 20px 0px rgb(192, 192, 192);
 }
 
 
-/* barevná šachovnice + hover */
-
-tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
-    background-color: rgb(135, 234, 241);
+.login-btt, .logout-btt {
+    text-align: right;
+    margin-right: 20px;
 }
 
-.player2 td:hover,.player2 tr:nth-child(odd) td:nth-child(odd):hover,.player2 tr:nth-child(even) td:nth-child(even):hover {
-    background-image: url(./Illustrator/SVG/Crosshair.svg);
-}
-
-
-
-
-.button span{
-    background-color: blue;
-    padding: 10px 20px;
-    border-radius: 30px;
- 
-}
-
-.play span{
-    position: absolute;
-    left: 48%;
-    bottom: -80px;
+.login-btt > input {
+    display: none;
 
 }
 
-.newgame {
-    position: absolute;
-    left: 46%;
-}
-
-.button span a{
-    color: white;
+.login-btt > label, .logout-btt a {
+    color: rgb(62, 62, 255);
     font-size: 1.2em;
-    font-weight: 700;
+    font-weight: 800;
+    padding: 8px 15px;
+    background-color: rgb(255, 255, 255);
+   
+    border-radius: 10px;
+    
+}
+
+.logout-btt a {
     text-decoration: none;
+}
+
+.login-container {
+    text-align: left;
+    position: absolute;
+    top: 200px;
+    left: calc((100vw - 1050px) / 2);
+    z-index: 5;
+    display: none;
+    
+}
+
+.login-container label {
+    position: absolute;
+    right: -15px;
+    top: -15px;
 
 }
+
+#log-in-btt:checked ~ .login-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    z-index: 2;
+    margin: 0 50px;
+    background-color: white;
+    box-shadow: 0 0  100px 20000px rgba(0, 0, 0, 0.4);
+    
+
+}
+
+
+.form p {
+    margin: 20px 0 5px 0;
+}
+
+.form input {
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+
+.login-container section {
+    width: 300px;
+    padding: 25px 25px;
+    margin: -2px;
+    background-color: white;
+    
+}
+
+.login-container section .button {
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Výběr lodí */
+
+
+.gameboard-select, .gameboard{
+    width: 520px;
+    padding-left: 40px;
+}
+
+.gameboard {
+    margin: 30px 50px;
+}
+
 
 .battleships{
-    position: absolute;
-    top: 200px;
-    right: 180px;
+    width: 500px;
+    margin: 0 20px;
 }
 
 .battleships img {
@@ -119,10 +173,189 @@ tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
 }
 
 
-.headline{
-    font-size: 1.5em;
-    font-weight: 600;
-    text-decoration: underline;
+.headline p {
+    margin: 0 0  20px 0;
+}
+
+
+
+
+
+
+
+.button-wrap {
+    width: 50vw;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.button-wrap .button {
+    margin-top: 30px;
+}
+
+.button span{
+    background-color: rgb(62, 62, 255);
+    padding: 10px 20px;
+    border-radius: 30px;
+ 
+}
+
+
+.button span input{
+    display: none;
+}
+
+.button span a, .button span label{
+    color: white;
+    padding: 8px 10px;
+    font-size: 1.2em;
+    font-weight: 700;
+    text-decoration: none;
+
+}
+
+
+
+
+
+
+
+.find-game_container { 
+    position: absolute;
+    top: 200px;
+    left: calc((100vw - 1000px) / 2);
+
+    background-color: white;
+    box-shadow: 0 0  100px 20000px rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    display: none;
+
+}
+.find-game_container h2{
+    margin: 10px auto 30px 50px;
+}
+
+.find-game_container thead th {
+    font-size: 1.2em;
+}
+
+.find-game_container label{
+    position: absolute;
+    top: -20px;
+    right: -20px;
+
+}
+
+
+.find-game_container td {
+    text-align: center;
+
+
+}
+
+
+.find-game_container tr td:first-child{
+    width: 250px ;
+}
+
+.find-game_container tr td:nth-child(2){
+    width: 200px ;
+}
+
+.find-game_container tr td:nth-child(3){
+    width: 250px ;
+}
+
+.find-game_container tr td:last-child{
+    text-align: right;
+    width: 200px ;
+}
+
+
+
+#find-game:checked ~ .find-game_container {
+    display: block;
+    margin: 0 50px;
+    box-shadow: 0 0  100px 20000px rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.gametable {
+    width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+
+.player1::before {
+    content: "Tvoje lodě";
+}
+.player2::before {
+    content: "Protivník";
+}
+
+.player1::before, .player2::before{
+    font-size: 2em;
+    font-weight: 700;
+}
+
+
+.player2 table span{
+    color: transparent;
+}
+
+.game { 
+    border-spacing: 0px;
+    background-color: white;
+    border: solid 2px black;
+}
+
+.game td {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* barevná šachovnice + hover */
+
+.game tr:nth-child(odd) td:nth-child(odd), .game tr:nth-child(even) td:nth-child(even){
+    background-color: rgb(135, 234, 241);
+}
+
+.player2 td:hover,.player2 tr:nth-child(odd) td:nth-child(odd):hover,.player2 tr:nth-child(even) td:nth-child(even):hover {
+    background-image: url(./Illustrator/SVG/Crosshair.svg);
 }
 
 
@@ -137,6 +370,12 @@ tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
     background-size: contain;
     background-repeat: no-repeat;
 }
+
+.hit span {
+    background-image: url(./Illustrator/SVG/Hit.svg);
+
+}
+
 
 
 .player2 tr:nth-child(10) span, .player2 tr:nth-child(9) span, .player2 tr:nth-child(8) span, .player2 tr:nth-child(7) span, .player2 tr:nth-child(6) span {
@@ -182,6 +421,11 @@ tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
 }
 
 
+.vertical{
+    transform: rotate(90deg);
+}
+
+
 
 .offset-1{
     background-position-x: 0;
@@ -214,7 +458,7 @@ tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
 
 .columnorder {
     display: flex;
-    margin: 0 auto;
+    margin: 30px auto 0 auto;
     padding: 0;
 }
 
@@ -224,24 +468,24 @@ tr:nth-child(odd) td:nth-child(odd), tr:nth-child(even) td:nth-child(even){
     text-align: center;
 }
 
-.columnorder span, tr::before {
+.columnorder span, .game tr::before {
     font-size: 1.2em;
     font-weight: 600;
 }
 
-tr{
+.game tr{
     height: 54px;
     counter-increment: lineorder;
     position: relative;
     display: flex;  
 }
 
-tr::before {
+.game tr::before {
     content: counter(lineorder);
     position: absolute;
     left: -25px;
     top: 15px;
 }
-tr:last-child::before{
+.game tr:last-child::before{
     left: -32px;
 }
